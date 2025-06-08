@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -147,55 +148,10 @@ const TechnologySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${
+          className={`text-center mb-10 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
-        >
-          <div className="inline-flex items-center space-x-2 bg-purple-100 rounded-full px-6 py-3 mb-6">
-            <Cpu className="w-5 h-5 text-purple-600" />
-            <span className="text-purple-800 font-semibold">
-              Technology Stack
-            </span>
-          </div>
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            Advanced <span className="gradient-text-purple">Technology</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Cutting-edge dataset, model architecture, and deployment
-            infrastructure powering next-generation driver monitoring
-          </p>
-        </div>
-
-        {/* Dataset Statistics */}
-        <div
-          className={`mb-20 transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {datasetStats.map((stat, index) => (
-              <Card
-                key={index}
-                className="group hover-lift border-0 overflow-hidden"
-              >
-                <CardContent className="p-6 text-center relative">
-                  <div
-                    className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${stat.color}`}
-                  ></div>
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                  >
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-4xl font-bold text-gray-900 mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        ></div>
 
         {/* Technology Tabs */}
         <div
@@ -303,129 +259,43 @@ const TechnologySection = () => {
             </CardContent>
           </Card>
         </div>
-
-        {/* Deployment Architecture */}
-        <div
-          className={`mb-20 transition-all duration-1000 delay-600 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <Card className="bg-gradient-to-br from-slate-900 to-blue-900 border-0 text-white overflow-hidden">
-            <CardContent className="p-12">
-              <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold mb-4">
-                  Deployment Architecture
-                </h3>
-                <p className="text-blue-200 max-w-2xl mx-auto">
-                  Optimized hardware and software stack for real-world
-                  automotive deployment
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow">
-                    <Camera className="w-10 h-10 text-white" />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">
-                    Multi-Spectral Cameras
-                  </h4>
-                  <p className="text-blue-200 text-sm">
-                    RGB, NIR, and Thermal imaging for comprehensive driver
-                    monitoring
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div
-                    className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow"
-                    style={{ animationDelay: "1s" }}
-                  >
-                    <Cpu className="w-10 h-10 text-white" />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">
-                    Edge Processing
-                  </h4>
-                  <p className="text-blue-200 text-sm">
-                    Raspberry Pi 4 + Coral TPU for real-time AI inference
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div
-                    className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow"
-                    style={{ animationDelay: "2s" }}
-                  >
-                    <Activity className="w-10 h-10 text-white" />
-                  </div>
-                  <h4 className="text-xl font-semibold mb-2">Alert System</h4>
-                  <p className="text-blue-200 text-sm">
-                    Adaptive audio, haptic, and visual alerts for driver
-                    intervention
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div className="glass-dark rounded-xl p-6 text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-1">
-                    22 FPS
-                  </div>
-                  <div className="text-blue-200 text-sm">Processing Speed</div>
-                </div>
-                <div className="glass-dark rounded-xl p-6 text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-1">
-                    &lt;90ms
-                  </div>
-                  <div className="text-blue-200 text-sm">Latency</div>
-                </div>
-                <div className="glass-dark rounded-xl p-6 text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-1">
-                    &lt;15W
-                  </div>
-                  <div className="text-blue-200 text-sm">Power Consumption</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="">
+          <h3 className=" text-black text-center font-bold text-4xl pt-16">
+            System Flow
+          </h3>
+          <p className=" text-center text-gray-700 pt-2">
+            An illustration of how data and processes move through the system’s
+            architecture.
+          </p>
+          <div className=" flex items-center justify-center w-full mt-10">
+            <Image
+              src="\images\SystemFlowImage.png"
+              alt="System Flow Image"
+              width={840}
+              height={150}
+              className=" object-cover  "
+            />
+          </div>
         </div>
 
-        {/* Download CTA */}
-        <div
-          className={`text-center transition-all duration-1000 delay-800 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <Card className="bg-gradient-to-r from-green-500 to-blue-500 border-0 text-white overflow-hidden">
-            <CardContent className="p-12 relative">
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-6">Open Source Release</h3>
-                <p className="text-green-100 mb-8 max-w-2xl mx-auto text-lg">
-                  Dataset, model weights, and complete source code will be
-                  released to advance research in driver monitoring systems
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                  <Button
-                    size="lg"
-                    className="bg-white text-green-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                  >
-                    <Download className="w-5 h-5 mr-2" />
-                    Coming Soon
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-white/30 text-black hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-                  >
-                    <Database className="w-5 h-5 mr-2" />
-                    Preview Dataset
-                  </Button>
-                </div>
-              </div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
-            </CardContent>
-          </Card>
+        <div className="">
+          <div className=" w-40  border-b pt-20 mx-auto pb-5"></div>
+          <h3 className=" text-black text-center font-bold text-4xl pt-20">
+            The Modular Software Design
+          </h3>
+          <p className=" text-center text-gray-700 pt-2">
+            A visual representation of the system’s modular structure and its
+            components.
+          </p>
+          <div className=" flex items-center justify-center w-full mt-10">
+            <Image
+              src="\images\SoftwareDesignImage.png"
+              alt="System Flow Image"
+              width={740}
+              height={150}
+              className=" object-cover  "
+            />
+          </div>
         </div>
       </div>
     </section>

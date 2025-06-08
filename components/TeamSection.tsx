@@ -194,19 +194,6 @@ const TeamSection = () => {
                       {supervisor.university}
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                      {supervisor.achievements.map((achievement, index) => (
-                        <div
-                          key={index}
-                          className="glass-dark rounded-lg p-3 text-center"
-                        >
-                          <div className="text-cyan-300 font-semibold text-sm">
-                            {achievement}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-6">
                       <a
                         href={`mailto:${supervisor.email}`}
@@ -279,37 +266,6 @@ const TeamSection = () => {
                     </div>
 
                     <div className="space-y-4">
-                      <div className="bg-gray-50 rounded-xl p-4">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <GraduationCap className="w-4 h-4 text-gray-500" />
-                          <span className="text-sm font-medium text-gray-700">
-                            Specialization
-                          </span>
-                        </div>
-                        <p className="text-gray-600 text-sm">
-                          {member.specialization}
-                        </p>
-                      </div>
-
-                      <div className="bg-gray-50 rounded-xl p-4">
-                        <div className="text-sm font-medium text-gray-700 mb-3">
-                          Key Contributions
-                        </div>
-                        <div className="space-y-2">
-                          {member.contributions.map((contribution, idx) => (
-                            <div
-                              key={idx}
-                              className="flex items-center space-x-2"
-                            >
-                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                              <span className="text-gray-600 text-sm">
-                                {contribution}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
                       <div className="space-y-3">
                         <a
                           href={`mailto:${member.email}`}

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Menu, X, Zap, Eye, Brain } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { Menu, X, Zap, Eye, Brain } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,34 +12,36 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Research', href: '#research' },
-    { label: 'Technology', href: '#technology' },
-    { label: 'Results', href: '#results' },
-    { label: 'Team', href: '#team' },
-    { label: 'Contact', href: '#contact' },
+    { label: "Home", href: "#home" },
+    { label: "Research", href: "#research" },
+    { label: "Technology", href: "#technology" },
+    { label: "Results", href: "#results" },
+    { label: "Team", href: "#team" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
     }
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-white/90 backdrop-blur-md shadow-xl border-b border-gray-100' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md shadow-xl border-b border-gray-100"
+          : "bg-white/90"
+      }`}
+    >
+      <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -50,14 +52,18 @@ const Header = () => {
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-pulse-glow"></div>
             </div>
             <div className="hidden sm:block">
-              <h1 className={`text-xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`}>
-                DrowsyGuard AI
+              <h1
+                className={`text-xl font-bold transition-colors duration-300 ${
+                  isScrolled ? "text-gray-900" : "text-gray-900"
+                }`}
+              >
+                REAL-TIME DRIVER DROWSINESS DETECTION
               </h1>
-              <p className={`text-sm transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600' : 'text-gray-300'
-              }`}>
+              <p
+                className={`text-sm transition-colors duration-300 ${
+                  isScrolled ? "text-gray-700" : "text-gray-700"
+                }`}
+              >
                 Research Project
               </p>
             </div>
@@ -70,17 +76,17 @@ const Header = () => {
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                  isScrolled 
-                    ? 'text-gray-700 hover:text-blue-600 hover:bg-blue-50' 
-                    : 'text-white hover:text-cyan-300 hover:bg-white/10'
+                  isScrolled
+                    ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                    : "text-gray-700 hover:text-cyan-300 hover:bg-white/10"
                 }`}
               >
                 {item.label}
               </button>
             ))}
-            <Button 
+            <Button
               className="ml-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => scrollToSection("#contact")}
             >
               <Zap className="w-4 h-4 mr-2" />
               Get Started
@@ -92,11 +98,17 @@ const Header = () => {
             variant="ghost"
             size="sm"
             className={`lg:hidden transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              isScrolled
+                ? "text-gray-900 hover:bg-gray-100"
+                : "text-white hover:bg-white/10"
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </Button>
         </div>
 
@@ -109,17 +121,17 @@ const Header = () => {
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
                   className={`flex items-center w-full text-left py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-                    isScrolled 
-                      ? 'text-gray-700 hover:text-blue-600 hover:bg-blue-50' 
-                      : 'text-white hover:text-cyan-300 hover:bg-white/10'
+                    isScrolled
+                      ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                      : "text-white hover:text-cyan-300 hover:bg-white/10"
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
-              <Button 
+              <Button
                 className="w-full mt-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white"
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => scrollToSection("#contact")}
               >
                 <Zap className="w-4 h-4 mr-2" />
                 Get Started

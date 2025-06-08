@@ -1,35 +1,44 @@
-'use client';
+"use client";
 
-import { Mail, Phone, MapPin, ExternalLink, Github, FileText, Database, Award } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Github,
+  FileText,
+  Database,
+  Award,
+} from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'Research Overview', href: '#research' },
-    { label: 'Technology Stack', href: '#technology' },
-    { label: 'Results & Impact', href: '#results' },
-    { label: 'Research Team', href: '#team' }
+    { label: "Research Overview", href: "#research" },
+    { label: "Technology Stack", href: "#technology" },
+    { label: "Results & Impact", href: "#results" },
+    { label: "Research Team", href: "#team" },
   ];
 
   const researchLinks = [
-    { label: 'Published Papers', href: '#', icon: FileText },
-    { label: 'Technical Documentation', href: '#', icon: ExternalLink },
-    { label: 'Dataset Access', href: '#', icon: Database },
-    { label: 'Source Code', href: '#', icon: Github }
+    { label: "Published Papers", href: "#", icon: FileText },
+    { label: "Technical Documentation", href: "#", icon: ExternalLink },
+    { label: "Dataset Access", href: "#", icon: Database },
+    { label: "Source Code", href: "#", icon: Github },
   ];
 
   const achievements = [
     { metric: "93.2%", label: "Drowsiness Accuracy" },
     { metric: "89.7%", label: "Stress Detection" },
     { metric: "37%", label: "Risk Reduction" },
-    { metric: "22 FPS", label: "Real-time Processing" }
+    { metric: "22 FPS", label: "Real-time Processing" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -45,18 +54,23 @@ const Footer = () => {
                 <span className="text-white font-bold text-lg">DG</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">DrowsyGuard AI</h3>
+                <h3 className="text-xl font-bold">
+                  REAL-TIME DRIVER DROWSINESS DETECTION
+                </h3>
                 <p className="text-blue-300 text-sm">Research Project</p>
               </div>
             </div>
             <p className="text-blue-200 mb-6 leading-relaxed">
-              Revolutionary real-time driver drowsiness detection using non-intrusive multispectral vision and 
-              physio-behavioral cues. Advancing automotive safety through cutting-edge AI technology.
+              Revolutionary real-time driver drowsiness detection using
+              non-intrusive multispectral vision and physio-behavioral cues.
+              Advancing automotive safety through cutting-edge AI technology.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-blue-300">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">University of Sri Jayewardenepura</span>
+                <span className="text-sm">
+                  University of Sri Jayewardenepura
+                </span>
               </div>
               <div className="flex items-center space-x-3 text-blue-300">
                 <Mail className="w-4 h-4" />
@@ -114,13 +128,19 @@ const Footer = () => {
         {/* Achievements Banner */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-cyan-500/20">
           <div className="text-center mb-6">
-            <h4 className="text-xl font-bold text-white mb-2">Research Achievements</h4>
-            <p className="text-blue-200">Breakthrough results in driver monitoring technology</p>
+            <h4 className="text-xl font-bold text-white mb-2">
+              Research Achievements
+            </h4>
+            <p className="text-blue-200">
+              Breakthrough results in driver monitoring technology
+            </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-cyan-300 mb-2">{achievement.metric}</div>
+                <div className="text-3xl font-bold text-cyan-300 mb-2">
+                  {achievement.metric}
+                </div>
                 <div className="text-blue-200 text-sm">{achievement.label}</div>
               </div>
             ))}
@@ -131,19 +151,28 @@ const Footer = () => {
         <div className="border-t border-blue-800/50 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-blue-300 text-sm mb-4 md:mb-0 text-center md:text-left">
-              © {currentYear} DrowsyGuard AI Research Project. University of Sri Jayewardenepura. 
+              © {currentYear} REAL-TIME DRIVER DROWSINESS DETECTION Research
+              Project. University of Sri Jayewardenepura.
               <br className="md:hidden" />
-              <span className="block md:inline md:ml-1">All rights reserved.</span>
+              <span className="block md:inline md:ml-1">
+                All rights reserved.
+              </span>
             </div>
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-blue-300 hover:text-cyan-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-blue-300 hover:text-cyan-400 transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-blue-300 hover:text-cyan-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="text-blue-300 hover:text-cyan-400 transition-colors duration-200"
+              >
                 Terms of Use
               </a>
-              <button 
-                onClick={() => scrollToSection('#contact')} 
+              <button
+                onClick={() => scrollToSection("#contact")}
                 className="text-blue-300 hover:text-cyan-400 transition-colors duration-200"
               >
                 Contact Us

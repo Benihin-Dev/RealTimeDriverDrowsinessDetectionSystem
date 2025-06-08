@@ -121,78 +121,6 @@ const ResearchSection = () => {
       className="section-padding bg-gradient-to-br from-gray-50 to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div
-          className={`text-center mb-20 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <div className="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-6 py-3 mb-6">
-            <Brain className="w-5 h-5 text-blue-600" />
-            <span className="text-blue-800 font-semibold">
-              Research Innovation
-            </span>
-          </div>
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            Revolutionary <span className="gradient-text">AI Research</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Pioneering the future of automotive safety through cutting-edge
-            computer vision and deep learning technologies
-          </p>
-        </div>
-
-        {/* Interactive Features Grid */}
-        <div
-          className={`mb-20 transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className={`group cursor-pointer transition-all duration-500 hover-lift border-0 overflow-hidden ${
-                  activeFeature === index
-                    ? "ring-2 ring-blue-500 shadow-2xl"
-                    : "shadow-lg"
-                }`}
-                onMouseEnter={() => setActiveFeature(index)}
-              >
-                <CardContent className="p-0">
-                  <div
-                    className={`h-2 bg-gradient-to-r ${feature.gradient}`}
-                  ></div>
-                  <div className="p-8">
-                    <div className="flex items-start space-x-4">
-                      <div
-                        className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                      >
-                        <feature.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-3">
-                          <h4 className="text-xl font-bold text-gray-900">
-                            {feature.title}
-                          </h4>
-                          <span
-                            className={`text-sm font-semibold px-3 py-1 rounded-full bg-gradient-to-r ${feature.gradient} text-white`}
-                          >
-                            {feature.stats}
-                          </span>
-                        </div>
-                        <p className="text-gray-600 leading-relaxed">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
         {/* Project Overview */}
         <div
           className={`mb-20 transition-all duration-1000 delay-400 ${
@@ -276,6 +204,78 @@ const ResearchSection = () => {
           </Card>
         </div>
 
+        {/* Section Header */}
+        <div
+          className={`text-center mb-20 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <div className="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-6 py-3 mb-6">
+            <Brain className="w-5 h-5 text-blue-600" />
+            <span className="text-blue-800 font-semibold">
+              Research Innovation
+            </span>
+          </div>
+          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+            Revolutionary <span className="gradient-text">AI Research</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Pioneering the future of automotive safety through cutting-edge
+            computer vision and deep learning technologies
+          </p>
+        </div>
+
+        {/* Interactive Features Grid */}
+        <div
+          className={`mb-20 transition-all duration-1000 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className={`group cursor-pointer transition-all duration-500 hover-lift border-0 overflow-hidden ${
+                  activeFeature === index
+                    ? "ring-2 ring-blue-500 shadow-2xl"
+                    : "shadow-lg"
+                }`}
+                onMouseEnter={() => setActiveFeature(index)}
+              >
+                <CardContent className="p-0">
+                  <div
+                    className={`h-2 bg-gradient-to-r ${feature.gradient}`}
+                  ></div>
+                  <div className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      >
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between mb-3">
+                          <h4 className="text-xl font-bold text-gray-900">
+                            {feature.title}
+                          </h4>
+                          <span
+                            className={`text-sm font-semibold px-3 py-1 rounded-full bg-gradient-to-r ${feature.gradient} text-white`}
+                          >
+                            {feature.stats}
+                          </span>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         {/* Research Findings */}
         <div
           className={`mb-20 transition-all duration-1000 delay-600 ${
@@ -322,46 +322,6 @@ const ResearchSection = () => {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Research Papers CTA */}
-        <div
-          className={`text-center transition-all duration-1000 delay-800 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <Card className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 border-0 text-white overflow-hidden">
-            <CardContent className="p-12 relative">
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-6">
-                  Explore Our Research
-                </h3>
-                <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg">
-                  Dive deep into our published research papers, technical
-                  documentation, and open-source contributions
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                  <Button
-                    size="lg"
-                    className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                  >
-                    <FileSearch className="w-5 h-5 mr-2" />
-                    Research Papers
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-white/30  hover:border-blue-300  text-black bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-                  >
-                    <Brain className="w-5 h-5 mr-2" />
-                    Technical Docs
-                  </Button>
-                </div>
-              </div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
