@@ -68,7 +68,7 @@ const TeamSection = () => {
       phone: "+94 76 180 1738",
       specialization: "Hardware Integration, Embedded Systems",
       image:
-        "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwSmY9GgVToRKclDyC2BMSp-waPVtVaPJiQ&s",
       gradient: "from-green-500 to-teal-500",
       contributions: ["Hardware Setup", "System Integration", "Field Testing"],
     },
