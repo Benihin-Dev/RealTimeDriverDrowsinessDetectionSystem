@@ -57,7 +57,7 @@ const Header = () => {
                   isScrolled ? "text-gray-900" : "text-gray-900"
                 }`}
               >
-                REAL-TIME DRIVER DROWSINESS DETECTION
+                DROWSINESS DETECTION & ALERT SYSTEM
               </h1>
               <p
                 className={`text-sm transition-colors duration-300 ${

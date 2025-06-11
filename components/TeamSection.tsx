@@ -39,8 +39,7 @@ const TeamSection = () => {
       email: "ict20876@fot.sjp.ac.lk",
       phone: "+94776683240",
       specialization: "AI/ML Development, Edge Computing",
-      image:
-        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      image: "/images/lakeesan.jpeg",
       gradient: "from-blue-500 to-cyan-500",
       contributions: [
         "STAF Model Architecture",
@@ -54,8 +53,7 @@ const TeamSection = () => {
       email: "ict20922@fot.sjp.ac.lk",
       phone: "+94 76 758 5990",
       specialization: "Computer Vision, Signal Processing",
-      image:
-        "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      image: "/images/sampath.jpeg",
       gradient: "from-purple-500 to-pink-500",
       contributions: [
         "Computer Vision Pipeline",
@@ -81,10 +79,10 @@ const TeamSection = () => {
     role: "Senior Lecturer",
     department: "Faculty of Technology",
     university: "University of Sri Jayewardenepura",
-    email: "pulasthi@sjp.ac.lk",
+    email: "chamilakarunatilake@sjp.ac.lk",
     specialization: "Computer Vision, Machine Learning, IoT Systems",
     image:
-      "https://images.pexels.com/photos/2182969/pexels-photo-2182969.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcowGp0Ioktljs1hxejV8Kobpn3z2e-A9KPw&s",
     achievements: [
       "15+ Years Research Experience",
       "50+ Published Papers",

@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ResearchSection from "@/components/ResearchSection";
 import TechnologySection from "@/components/TechnologySection";
-import ResultsSection from "@/components/ResultsSection";
 import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -16,7 +15,6 @@ export default function Home() {
       <HeroSection />
       <ResearchSection />
       <TechnologySection />
-      <ResultsSection />
       <TeamSection />
       <ContactSection />
       <Footer />
